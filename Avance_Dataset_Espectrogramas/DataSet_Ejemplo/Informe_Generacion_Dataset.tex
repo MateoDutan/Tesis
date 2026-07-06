@@ -1,0 +1,43 @@
+\subsection{Bitácora de Generación Sintética y Perfilado Vectorial}
+
+El presente subcapítulo documenta el estado dimensional y energético de los vectores de audio de forma previa a la suma de superposición $y[n] = \alpha \cdot g'_{rev}[n] + \beta \cdot r[n]$. Las métricas RMS y Peak corresponden al estado crudo de las matrices extraídas mediante \textit{Librosa} antes del escalado lineal. La tabla a continuación fue autogenerada el 2026-07-05 durante la ejecución del algoritmo iterativo.
+
+\textbf{Resumen Estadístico del Dataset:}
+\begin{itemize}
+    \item \textbf{Total de Muestras Generadas:} 20
+    \item \textbf{Clase Anómala (Presencia de Grito):} 8
+    \item \textbf{Clase Normal (Ausencia de Grito):} 12
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{ID} & \textbf{Clase} & \textbf{N} & \textbf{M} & \textbf{Inicio (s)} & \textbf{RMS (R)} & \textbf{RMS (G)} & \textbf{Peak (R)} & \textbf{Peak (G)} & \textbf{SNR} & \textbf{$\alpha$} & \textbf{$\beta$} & \textbf{Clip} \\ \hline
+0001 & normal & 1323001 & N/A & N/A & 0.04049 & N/A & 0.3364 & N/A & N/A & N/A & 1.1859 & No \\ \hline
+0002 & normal & 1323001 & N/A & N/A & 0.00658 & N/A & 0.0689 & N/A & N/A & N/A & 0.7573 & No \\ \hline
+0003 & anomalia & 1323001 & 88576 & 15.77 & 0.05958 & 0.14268 & 0.2457 & 0.6655 & -4.41 & 0.2997 & 1.1927 & No \\ \hline
+0004 & normal & 1323001 & N/A & N/A & 0.06667 & N/A & 0.2959 & N/A & N/A & N/A & 1.1970 & No \\ \hline
+0005 & normal & 1323001 & N/A & N/A & 0.05685 & N/A & 0.2457 & N/A & N/A & N/A & 1.3183 & No \\ \hline
+0006 & normal & 1323001 & N/A & N/A & 0.01769 & N/A & 0.0968 & N/A & N/A & N/A & 1.1307 & No \\ \hline
+0007 & normal & 1323001 & N/A & N/A & 0.00707 & N/A & 0.0322 & N/A & N/A & N/A & 1.3823 & No \\ \hline
+0008 & normal & 1323001 & N/A & N/A & 0.00707 & N/A & 0.0322 & N/A & N/A & N/A & 1.0164 & No \\ \hline
+0009 & normal & 1323001 & N/A & N/A & 0.01769 & N/A & 0.0968 & N/A & N/A & N/A & 0.8787 & No \\ \hline
+0010 & anomalia & 1323001 & 88576 & 6.59 & 0.05618 & 0.14268 & 0.1786 & 0.6655 & +4.45 & 0.6944 & 1.0568 & No \\ \hline
+0011 & normal & 1323001 & N/A & N/A & 0.04910 & N/A & 0.2374 & N/A & N/A & N/A & 1.2662 & No \\ \hline
+0012 & normal & 1323001 & N/A & N/A & 0.06667 & N/A & 0.2959 & N/A & N/A & N/A & 1.0407 & No \\ \hline
+0013 & anomalia & 1323001 & 88576 & 18.89 & 0.05129 & 0.14268 & 0.1912 & 0.6655 & -6.13 & 0.1370 & 0.7716 & No \\ \hline
+0014 & anomalia & 1323001 & 36352 & 12.70 & 0.00124 & 0.33061 & 0.0073 & 0.9469 & +2.83 & 0.0039 & 0.7470 & No \\ \hline
+0015 & anomalia & 1323001 & 105472 & 24.41 & 0.02068 & 0.15498 & 0.0747 & 0.8625 & -2.30 & 0.0730 & 0.7128 & No \\ \hline
+0016 & anomalia & 1323001 & 88576 & 2.94 & 0.05408 & 0.14268 & 0.2061 & 0.6655 & -3.63 & 0.2656 & 1.0639 & No \\ \hline
+0017 & normal & 1323001 & N/A & N/A & 0.00658 & N/A & 0.0689 & N/A & N/A & N/A & 1.3000 & No \\ \hline
+0018 & anomalia & 1323001 & 143360 & 13.00 & 0.07364 & 0.03315 & 0.4022 & 0.2883 & +0.67 & 1.8559 & 0.7732 & No \\ \hline
+0019 & normal & 1323001 & N/A & N/A & 0.00707 & N/A & 0.0322 & N/A & N/A & N/A & 1.0417 & No \\ \hline
+0020 & anomalia & 1323001 & 143360 & 2.58 & 0.00732 & 0.03315 & 0.0251 & 0.2883 & -8.29 & 0.0881 & 1.0378 & No \\ \hline
+\end{tabular}
+}
+\vspace{0.2cm}
+\caption{Registro de parámetros matriciales, tiempos de inserción y coeficientes de mezcla aditiva por cada archivo acústico generado. $N$ y $M$ corresponden a la longitud de los vectores en muestras.}
+\label{tab:bitacora_generacion}
+\end{table}
